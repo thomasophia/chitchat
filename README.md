@@ -1,5 +1,6 @@
 # ChitChat
 ChitChat is a simple "chat" application without network connection. Messages in the chat can be sent via a text field and come back immediately or after a timeout.
+This is a practice project that was created as part of the Cross Plattform Basics course at the FH Technikum Vienna.
 
 ## How to run the app
 1. install dependencies using ‘npm install’
@@ -17,5 +18,5 @@ ChitChat is a simple "chat" application without network connection. Messages in 
 
 ## How the app looks like
 
-https://user-images.githubusercontent.com/112976198/214290872-e873d100-c513-47c3-a919-5fc854dec848.mov
+> <img src="https://user-images.githubusercontent.com/112976198/214290872-e873d100-c513-47c3-a919-5fc854dec848.mov" width="300"/>
 
