@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="title">
+    <ion-title>
+      <img id="icon-small" src="assets/chitchat_logo_kl.png" alt="">
+      ChitChat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="list">
+<div class="fixed">
+  <ion-list>
+    <ion-item class="input-field">
+      <ion-input type="text" id="chat-name" #chatName placeholder="new chatname"></ion-input>
+      <ion-icon name="add-circle-outline" class="add-button" (click)="add(chatName.value); chatName.value=''"></ion-icon>
+    </ion-item>
+  </ion-list>
+</div>
+  <ion-list *ngFor="let chat of chats">
+    <ion-item >
+        <ion-button shape="circle" routerLink="/tabs/chat/{{chat.name}}">
+          <ion-text class="icon-text">{{chat.name[0] | uppercase}}</ion-text>
+        </ion-button>
+        <ion-label>
+          <h2 routerLink="/tabs/chat/{{chat.name}}">
+            {{chat.name}}</h2>
+          <div *ngFor="let message of chat.messages; index as i; last as isLast">
+            <p class="last-message" *ngIf="isLast">{{message.msg}}</p>
+          </div>
+        </ion-label>
+      <ion-icon class="delete-icon" name="close-outline" (click)="delete(chat)"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

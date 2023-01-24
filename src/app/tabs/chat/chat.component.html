@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">
+      {{chat}}
+    </ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row *ngFor="let message of messages">
+      <ion-col size="9" *ngIf="currentUser !== message.user" class="message other-message">
+        <b>{{ message.user }}</b><br>
+        <span>{{ message.msg }}</span>
+        <div class="time"><br>
+          {{message.timeStamp | date:'short'}}
+        </div>
+      </ion-col>
+      <ion-col size="9" offset="3" *ngIf="currentUser === message.user" class="message my-message">
+        <b>{{ message.user }}</b><br>
+        <span>{{ message.msg }}</span>
+        <div class="time"><br>
+          {{message.timeStamp | date:'short'}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row>
+      <ion-col size="10">
+        <textarea autosize class="message-input" [(ngModel)]="messageItem" placeholder="message"></textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button fill="clear" (click)="sendMessage()"><ion-icon name="send-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,49 @@
+.delete-icon {
+  color: grey;
+  right: 15px;
+}
+
+.last-message {
+  color: grey;
+}
+
+.icon-text {
+  color: white;
+  font-size: 15px;
+}
+
+ion-button[shape=circle] {
+  --border-radius: 50%;
+  --background: #9E77F2;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+#icon-small {
+  height: 50px;
+  position: fixed;
+  bottom: -5px;
+  left: 10px;
+}
+
+.add-button {
+  color: #9E77F2;
+}
+
+.input-field {
+  --ion-border-color: #9E77F2;
+}
+
+.list {
+  height: 70%;
+}
+
+.fixed {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
