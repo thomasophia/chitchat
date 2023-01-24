@@ -18,5 +18,5 @@ This is a practice project that was created as part of the Cross Plattform Basic
 
 ## How the app looks like
 
-img src="https://user-images.githubusercontent.com/112976198/214290872-e873d100-c513-47c3-a919-5fc854dec848.mov
+https://user-images.githubusercontent.com/112976198/214290872-e873d100-c513-47c3-a919-5fc854dec848.mov
 
